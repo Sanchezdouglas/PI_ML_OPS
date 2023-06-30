@@ -41,7 +41,8 @@ Como **`Data Scientist`** Nuestro objetivo principal es desarrollar un sistema d
 
 
 <p align="center">
-<img src="https://blog.bismart.com/hs-fs/hubfs/Imported_Blog_Media/ETL/20190604_imagen2.jpg?width=2777&name=20190604_imagen2.jpg"  height=300>
+  <img src="src/Transformacion.jpg" alt="Transformacion">
+</p>
 
 ## `Transformaciones`<br/>
 El archivo **ETL.ipynb** que proporcionaste muestra una serie de pasos que realizaste para extraer, transformar y cargar datos en un DataFrame llamado 'movies'. Aquí está un resumen de los pasos que llevaste a cabo:
@@ -63,7 +64,9 @@ El archivo **ETL.ipynb** que proporcionaste muestra una serie de pasos que reali
 
 <br/>
 <p align="center">
-<img src="https://miro.medium.com/v2/resize:fit:1200/1*6IRGx0lO62HAF9yUBhiROA.png"  height=300>
+  <img src="src/Desarrollo API.png" alt="Desarrollo API">
+</p>
+
 
 ## `Desarrollo API`:<br/>
 
@@ -99,7 +102,8 @@ http://127.0.0.1:8000/docs#/
 
 <br/>
 <p align="center">
-<img src="https://cdn-blog.scalablepath.com/uploads/2021/06/exploratory-data-analysis-900x615-1.png"  height=300>
+  <img src="src/EDA.png" alt="EDA">
+</p>
 
 ## `EDA (Análisis de datos exploratorios)`:
 
@@ -114,6 +118,10 @@ http://127.0.0.1:8000/docs#/
 Estos análisis proporcionan información sobre la relación entre el presupuesto y los ingresos, identifican valores atípicos, visualizan palabras frecuentes, y analizan variables como el idioma, estado, calificación y duración de las películas.
 # </h1>
 
+
+<p align="center">
+  <img src="src/Recomendacion.png" alt="Recomendacion">
+</p>
 
 ## `Sistema de Recomendación de Películas`: <br/>
 
