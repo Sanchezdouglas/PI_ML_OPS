@@ -130,7 +130,7 @@ Aquí encontrarás información adicional y recursos relacionados con nuestro pr
 <p align="center">
 <img src="https://rails.onrender.com/assets/render-40324cab144d545cc570827d81b1b41d81faac4968a2d3aaa96f2f1eb45c8435.png"  height=200>
 
-2. `Acceso a la API:` Proporcionamos documentación completa sobre cómo acceder a nuestra [API de recomendación de películas]((https://movies-c2m9.onrender.com)). Esta API te permitirá obtener recomendaciones personalizadas y utilizarlas en tu propia aplicación o proyecto.
+2. `Acceso a la API:` Proporcionamos documentación completa sobre cómo acceder a nuestra [API de recomendación de películas](enlace). Esta API te permitirá obtener recomendaciones personalizadas y utilizarlas en tu propia aplicación o proyecto.
 
 3. `Obtención de datos originales:` Si estás interesado en obtener acceso a los datos originales utilizados en nuestro análisis, ofrecemos un [enlace de descarga](https://drive.google.com/drive/folders/12aVGMdfpX0FbhbAGYT3ixhsm58n5w8ts?usp=sharing) para que puedas explorar y analizar los datos por ti mismo.
 
