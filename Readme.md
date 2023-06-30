@@ -1,152 +1,142 @@
 <p align=center><img src=https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png><p>
 
+# <h1 align=center> **APLICACIÓN PARA CONSULTAR Y RECIBIR RECOMENDACIONES DE PELÍCULAS** </h1>
 # <h1 align=center> **PROYECTO INDIVIDUAL Nº1** </h1>
 
 # <h1 align=center>**`Machine Learning Operations (MLOps)`**</h1>
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/67664604/217914153-1eb00e25-ac08-4dfa-aaf8-53c09038f082.png"  height=300>
+<img src="https://blogs.nvidia.com/wp-content/uploads/2020/09/MLOps-Neal-Analytics.png"  height=300>
 </p>
 
-¡Bienvenidos al primer proyecto individual de la etapa de labs! En esta ocasión, deberán hacer un trabajo situándose en el rol de un ***MLOps Engineer***.  
+¡Bienvenido a nuestra aplicación para consultar y recibir recomendaciones de películas! En esta plataforma, podrás explorar y descubrir películas de acuerdo a tus preferencias y gustos personales. Nuestro sistema de recomendación utilizará técnicas de ***Machine Learning*** para brindarte sugerencias personalizadas, basadas en un historial de películas vistas. 
 
 <hr>  
 
-## **Descripción del problema (Contexto y rol a desarrollar)**
+## **Descripción del proyecto**
 
 ## Contexto
 
-Tienes tu modelo de recomendación dando unas buenas métricas :smirk:, y ahora, cómo lo llevas al mundo real? :eyes:
+En el mundo actual de las plataformas de streaming, existe una gran cantidad de contenido disponible para los usuarios. Sin embargo, puede resultar abrumador encontrar películas que se ajusten a nuestros intereses específicos. Además, muchas veces nos encontramos perdidos y no sabemos qué película ver a continuación.
 
-El ciclo de vida de un proyecto de Machine Learning debe contemplar desde el tratamiento y recolección de los datos (Data Engineer stuff) hasta el entrenamiento y mantenimiento del modelo de ML según llegan nuevos datos.
+Como **`Data Scientist`** Nuestro objetivo principal es desarrollar un sistema de recomendación de películas que permita a los usuarios descubrir nuevos contenidos relevantes y disfrutar de una experiencia cinematográfica personalizada.
 
+**En este repositorio encontrarás un proceso integral de Data Science que incluye:**
 
-## Rol a desarrollar
+🌟 Aspectos destacados
 
-Empezaste a trabajar como **`Data Scientist`** en una start-up que provee servicios de agregación de plataformas de streaming. El mundo es bello y vas a crear tu primer modelo de ML que soluciona un problema de negocio: un sistema de recomendación que aún no ha sido puesto en marcha! 
++ Un completo cuaderno de Jupyter para una visualización fluida<br/>
++ Un proceso ETL paso a paso<br/>
++ Análisis exploratorio de datos y generación de ideas<br/>
++ Desarrollo de una API<br/>
++ Modelo de aprendizaje automático para un sistema de recomendación de películas<br/>
++ Implementación<br/>
 
-Vas a sus datos y te das cuenta que la madurez de los mismos es poca (ok, es nula :sob:): Datos anidados, sin transformar, no hay procesos automatizados para la actualización de nuevas películas o series, entre otras cosas….  haciendo tu trabajo imposible :weary:. 
+📚 Contenido
+<br/><br/><br/>
 
-Debes empezar desde 0, haciendo un trabajo rápido de **`Data Engineer`** y tener un **`MVP`** (_Minimum Viable Product_) para las próximas semanas! Tu cabeza va a explotar 🤯, pero al menos sabes cual es, conceptualmente, el camino que debes de seguir :exclamation:. Así que te espantas los miedos y te pones manos a la obra :muscle:
-
-<p align="center">
-<img src="https://github.com/HX-PRomero/PI_ML_OPS/raw/main/src/DiagramaConceptualDelFlujoDeProcesos.png"  height=500>
-</p>
-
-<sub> Nota que aqui se reflejan procesos no herramientas tecnologicas. Has el ejercicio de entender cual herramienta del stack corresponde a cual parte del proceso<sub/>
-
-## **Propuesta de trabajo (requerimientos de aprobación)**
-
-**`Transformaciones`**: El archivo **`ETL.ipynb`** contiene el código necesario para el proceso de Extracción, Transformación y Carga de datos, también conocido como ETL (Extract, Transform, Load). Este proceso es comúnmente utilizado en proyectos de análisis de datos y consiste en las siguientes etapas:
-
-
-+ Extracción: En esta etapa, se obtienen los datos de diferentes fuentes, como bases de datos, archivos CSV, entre otros. Dependiendo de la naturaleza del proyecto, la extracción puede implicar el uso de consultas SQL, solicitudes HTTP, lectura de archivos locales, entre otros métodos..
-
-+ Los valores nulos de los campos **`revenue`**, **`budget`** deben ser rellenados por el número **`0`**.
-  
-+ Los valores nulos del campo **`release date`** deben eliminarse.
-
-+ De haber fechas, deberán tener el formato **`AAAA-mm-dd`**, además deberán crear la columna **`release_year`** donde extraerán el año de la fecha de estreno.
-
-+ Crear la columna con el retorno de inversión, llamada **`return`** con los campos **`revenue`** y **`budget`**, dividiendo estas dos últimas **`revenue / budget`**, cuando no hay datos disponibles para calcularlo, deberá tomar el valor **`0`**.
-
-+ Eliminar las columnas que no serán utilizadas, **`video`**,**`imdb_id`**,**`adult`**,**`original_title`**,**`poster_path`** y **`homepage`**.
-
-<br/>
-
-**`Desarrollo API`**:   Propones disponibilizar los datos de la empresa usando el framework ***FastAPI***. Las consultas que propones son las siguientes:
-
-Deben crear 6 funciones para los endpoints que se consumirán en la API, recuerden que deben tener un decorador por cada una (@app.get(‘/’)).
-  
-+ def **cantidad_filmaciones_mes( *`Mes`* )**:
-    Se ingresa un mes en idioma Español. Debe devolver la cantidad de películas que fueron estrenadas en el mes consultado en la totalidad del dataset.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ejemplo de retorno: *`X` cantidad de películas fueron estrenadas en el mes de `X`*
-         
-
-+ def **cantidad_filmaciones_dia( *`Dia`* )**:
-    Se ingresa un día en idioma Español. Debe devolver la cantidad de películas que fueron estrenadas en día consultado en la totalidad del dataset.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ejemplo de retorno: *`X` cantidad de películas fueron estrenadas en los días `X`*
-
-+ def **score_titulo( *`titulo_de_la_filmación`* )**:
-    Se ingresa el título de una filmación esperando como respuesta el título, el año de estreno y el score.
-    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ejemplo de retorno: *La película `X` fue estrenada en el año `X` con un score/popularidad de `X`*
-
-+ def **votos_titulo( *`titulo_de_la_filmación`* )**:
-    Se ingresa el título de una filmación esperando como respuesta el título, la cantidad de votos y el valor promedio de las votaciones. La misma variable deberá de contar con al menos 2000 valoraciones, caso contrario, debemos contar con un mensaje avisando que no cumple esta condición y que por ende, no se devuelve ningun valor.
-    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ejemplo de retorno: *La película `X` fue estrenada en el año `X`. La misma cuenta con un total de `X` valoraciones, con un promedio de `X`*
-
-+ def **get_actor( *`nombre_actor`* )**:
-    Se ingresa el nombre de un actor que se encuentre dentro de un dataset debiendo devolver el éxito del mismo medido a través del retorno. Además, la cantidad de películas que en las que ha participado y el promedio de retorno. **La definición no deberá considerar directores.**
-    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ejemplo de retorno: *El actor `X` ha participado de `X` cantidad de filmaciones, el mismo ha conseguido un retorno de `X` con un promedio de `X` por filmación*
-
-+ def **get_director( *`nombre_director`* )**:
-    Se ingresa el nombre de un director que se encuentre dentro de un dataset debiendo devolver el éxito del mismo medido a través del retorno. Además, deberá devolver el nombre de cada película con la fecha de lanzamiento, retorno individual, costo y ganancia de la misma.
-
-
-
-<br/>
-
-
-**`Deployment`**: Conoces sobre [Render](https://render.com/docs/free#free-web-services) y tienes un [tutorial de Render](https://github.com/HX-FNegrete/render-fastapi-tutorial) que te hace la vida mas facil :smile: . Tambien podrias usar [Railway](https://railway.app/), o cualquier otro servicio que permita que la API pueda ser consumida desde la web.
-
-<br/>
-
-**`Análisis exploratorio de los datos`**: _(Exploratory Data Analysis-EDA)_
-
-Ya los datos están limpios, ahora es tiempo de investigar las relaciones que hay entre las variables de los datasets, ver si hay outliers o anomalías (que no tienen que ser errores necesariamente :eyes: ), y ver si hay algún patrón interesante que valga la pena explorar en un análisis posterior. Las nubes de palabras dan una buena idea de cuáles palabras son más frecuentes en los títulos, ¡podría ayudar al sistema de recomendación! Sabes que puedes apoyarte en librerías como _pandas profiling, missingno, sweetviz, autoviz_, entre otros y sacar de allí tus conclusiones 😉
-
-**`Sistema de recomendación`**: 
-
-Una vez que toda la data es consumible por la API, está lista para consumir por los departamentos de Analytics y Machine Learning, y nuestro EDA nos permite entender bien los datos a los que tenemos acceso, es hora de entrenar nuestro modelo de machine learning para armar un sistema de recomendación de películas. El EDA debería incluir gráficas interesantes para extraer datos, como por ejemplo una nube de palabras con las palabras más frecuentes en los títulos de las películas. Éste consiste en recomendar películas a los usuarios basándose en películas similares, por lo que se debe encontrar la similitud de puntuación entre esa película y el resto de películas, se ordenarán según el score de similaridad y devolverá una lista de Python con 5 valores, cada uno siendo el string del nombre de las películas con mayor puntaje, en orden descendente. Debe ser deployado como una función adicional de la API anterior y debe llamarse:
-
-
-+ def **recomendacion( *`titulo`* )**:
-    Se ingresa el nombre de una película y te recomienda las similares en una lista de 5 valores.
-
-<br/>
-
-**`Video`**: Necesitas que al equipo le quede claro que tus herramientas funcionan realmente! Haces un video mostrando el resultado de las consultas propuestas y de tu modelo de ML entrenado!
-
-<sub> **Spoiler**: El video NO DEBE durar mas de ***7 minutos*** y DEBE mostrar las consultas requeridas en funcionamiento desde la API y una breve explicacion del modelo utilizado para el sistema de recomendacion. En caso de que te sobre tiempo luego de grabarlo, puedes mostrar explicar tu EDA, ETL e incluso cómo desarrollaste la API. <sub/>
-
-<br/>
-
-## **Criterios de evaluación**
-
-**`Código`**: Prolijidad de código, uso de clases y/o funciones, en caso de ser necesario, código comentado. 
-
-**`Repositorio`**: Nombres de archivo adecuados, uso de carpetas para ordenar los archivos, README.md presentando el proyecto y el trabajo realizado. Recuerda que este último corresponde a la guía de tu proyecto, no importa que tan corto/largo sea siempre y cuando tu 'yo' + 1.5 AÑOS pueda entenderlo con facilidad. 
-
-**`Cumplimiento`** de los requerimientos de aprobación indicados en el apartado `Propuesta de trabajo`
-
-NOTA: Recuerde entregar el link de acceso al video. Puede alojarse en YouTube, Drive o cualquier plataforma de almacenamiento. **Verificar que sea de acceso público, recomendamos usar modo incógnito en tu navegador para confirmarlo**.
-
-<br/>
-Aqui te sintetizamos que es lo que consideramos un MVP aprobatorio, y la diferencia con un producto completo.
-
+# <h1 align=center> **Desarrollo del trabajo 👷** </h1>
 
 
 <p align="center">
-<img src="https://github.com/HX-PRomero/PI_ML_OPS/raw/main/src/MVP_MLops.PNG"  height=250>
-</p>
+<img src="https://blog.bismart.com/hs-fs/hubfs/Imported_Blog_Media/ETL/20190604_imagen2.jpg?width=2777&name=20190604_imagen2.jpg"  height=300>
 
+## `Transformaciones`<br/>
+El archivo **ETL.ipynb** que proporcionaste muestra una serie de pasos que realizaste para extraer, transformar y cargar datos en un DataFrame llamado 'movies'. Aquí está un resumen de los pasos que llevaste a cabo:
 
-## **Fuente de datos**
+1. Importaste las librerías `pandas`, `numpy` y `re`.
+2. Cargaste los archivos `'movies_dataset.csv'` y `'credits.csv'` en los DF`'movies'` y `'credits'`.
+3. Visualizaste los registros y la forma de cada DF.
+4. Normalizaste ciertas columnas en DF `'movies'` utilizando expresiones regulares y almacenaste los resultados en nuevas columnas.
+5. Normalizaste las columnas `'cast'` y `'crew'` en el DF `'credits'` y almacenaste los resultados en nuevas columnas.
+6. Desanidaste las columnas relevantes eliminándolas de los DF
+7. Evaluaste registros nulos y duplicados en cada columna del DF `'movies'`, excluyendo la columna `'id'`.
+8. Rellenaste nulos en `'revenue'` y `'budget'` con 0 en el DF `'movies'`.
+9. Eliminaste 'release_date'` del DF`'movies'`, cambiaste el formato de fecha y creaste una nueva columna `'release_year'`.
+10. Rellenaste nulos en `'revenue'` con 0 y eliminaste filas inválidas en `'budget'` en el DF `'movies'`.
+11. Convirtió `'budget'` y `'revenue'` a tipo de datos `'float64'` en el DF `'movies'`.
+12. Calculaste el retorno de inversión  `'revenue'` entre `'budget'`, asignando 0 si `'budget'` es 0 en la columna `'return'`.
+13. Se evaluan registros nulos y duplicamos en cada columna del DF `'movies'`.
+# </h1>
 
-- + [Dataset](https://drive.google.com/drive/folders/1nvSjC2JWUH48o3pb8xlKofi8SNHuNWeu): Carpeta con los 2 archivos con datos que requieren ser procesados (movies_dataset.csv y credits.csv), tengan en cuenta que hay datos que estan anidados (un diccionario o una lista como valores en la fila).
-+ [Diccionario de datos](https://docs.google.com/spreadsheets/d/1QkHH5er-74Bpk122tJxy_0D49pJMIwKLurByOfmxzho/edit#gid=0): Diccionario con algunas descripciones de las columnas disponibles en el dataset.
 <br/>
+<p align="center">
+<img src="https://miro.medium.com/v2/resize:fit:1200/1*6IRGx0lO62HAF9yUBhiROA.png"  height=300>
 
-## **Material de apoyo**
+## `Desarrollo API`:<br/>
 
-En este mismo repositorio podras encontrar algunos [links de ayuda](hhttps://github.com/HX-PRomero/PI_ML_OPS/raw/main/Material%20de%20apoyo.md). Recuerda que no son los unicos recursos que puedes utilizar!
+## API en desarrollo: 6 funciones API con FastAPI
+
+Esta API en desarrollo ofrece 6 funciones para consultar datos de películas utilizando FastAPI.
+
+### Funciones de la API
+
+1. `cantidad_filmaciones_mes(Mes)`: Esta función recibe como entrada un mes en español y devuelve el número de películas lanzadas durante ese mes en el conjunto de datos.
+
+2. `cantidad_filmaciones_dia(Dia)`: Esta función recibe como entrada un día de la semana en español y devuelve el número de películas lanzadas durante ese día en el conjunto de datos.
+
+3. `score_titulo(titulo_de_la_filmación)`: Esta función recibe como entrada el título de una película y devuelve el título, el año de lanzamiento y la puntuación de la película.
+
+4. `votos_titulo(titulo_de_la_filmación)`: Esta función recibe como entrada el título de una película y devuelve el título, el número de votos y el promedio de los votos.
+
+5. `get_actor(nombre_actor)`: Esta función recibe como entrada el nombre de un actor y devuelve su éxito medido a través del rendimiento. También muestra el número de películas en las que ha participado y el rendimiento promedio.
+
+6. `get_director(nombre_director)`: Esta función recibe como entrada el nombre de un director y mide su éxito a través de los retornos de rendimiento. Además, devuelve el nombre de cada película con la fecha de lanzamiento, el rendimiento individual, el costo y el beneficio.
+
+### Uso de la API
+
+Puedes utilizar herramientas con URL o para hacer consultas a la API. A continuación, se muestra un ejemplo de cómo hacer una consulta utilizando URL:
+
+http://localhost:10000/cantidad_filmaciones_mes/enero <br/>
+**o tambie puedes realizarlo de esta manera**<br/>
+http://127.0.0.1:8000/docs#/
+ <br/>
+# </h1>
 
 
 
-  
 <br/>
+<p align="center">
+<img src="https://cdn-blog.scalablepath.com/uploads/2021/06/exploratory-data-analysis-900x615-1.png"  height=300>
+
+## `EDA (Análisis de datos exploratorios)`:
+
+1. Relación entre Budget y Revenue: Gráfico de dispersión.
+2. Análisis de outliers: Boxplot de 'popularity'.
+3. Nube de palabras: Generada a partir de la columna 'title'.
+4. Limpieza de datos: Eliminación de columnas, completado de valores faltantes y reemplazo de valores específicos.
+5. Análisis de la columna 'status': Histograma y filtrado de registros.
+6. Análisis de la columna de calificación: Histograma y cálculo estadístico.
+7. Análisis de la columna 'runtime': Histograma y filtrado de registros.
+
+Estos análisis proporcionan información sobre la relación entre el presupuesto y los ingresos, identifican valores atípicos, visualizan palabras frecuentes, y analizan variables como el idioma, estado, calificación y duración de las películas.
+# </h1>
+
+
+## `Sistema de Recomendación de Películas`: <br/>
+
+Función de recomendación de películas: Modelo implementado para sugerir películas similares.
+- recomendacion ( *`titulo`*  )  ingresa el nombre de una película y recomienda otras similares en una lista de 5 valores.
+
+# <h1 align=center> **Mas detalles del Proyecto 👷** </h1>
+
+## Detalles adicionales del proyecto
+
+Aquí encontrarás información adicional y recursos relacionados con nuestro proyecto:
+
+1. `Video explicativo:` Hemos creado un [video explicativo](link_al_video)  Te invitamos a verlo para comprender mejor cómo funciona nuestro sistema de recomendación de películas.
+
+<br/>
+<p align="center">
+<img src="https://rails.onrender.com/assets/render-40324cab144d545cc570827d81b1b41d81faac4968a2d3aaa96f2f1eb45c8435.png"  height=200>
+
+2. `Acceso a la API:` Proporcionamos documentación completa sobre cómo acceder a nuestra [API de recomendación de películas](enlace). Esta API te permitirá obtener recomendaciones personalizadas y utilizarlas en tu propia aplicación o proyecto.
+
+3. `Obtención de datos originales:` Si estás interesado en obtener acceso a los datos originales utilizados en nuestro análisis, ofrecemos un [enlace de descarga](https://drive.google.com/drive/folders/12aVGMdfpX0FbhbAGYT3ixhsm58n5w8ts?usp=sharing) para que puedas explorar y analizar los datos por ti mismo.
+
+4. `Acceso rápido:`
+- Visualize ETL  [`ETL.ipynb`](./ETL.ipynb) notebook.
+- Visualize EDA  [`EDA.ipynb`](./EDA.ipynb) notebook.
+- Visualize API  [`MAIN.PY`](./main.py)
+
+No dudes en explorar estos recursos para obtener una visión más completa y detallada de mi proyecto de recomendación de películas. Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos [Sanchezdouglas](@Sanchezdouglas). ¡Disfruta del proyecto!
