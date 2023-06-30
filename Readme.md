@@ -145,12 +145,11 @@ Aquí encontrarás información adicional y recursos relacionados con nuestro pr
 3. `Obtención de datos originales:` Si estás interesado en obtener acceso a los datos originales utilizados en nuestro análisis, ofrecemos un [enlace de descarga](https://drive.google.com/drive/folders/12aVGMdfpX0FbhbAGYT3ixhsm58n5w8ts?usp=sharing) para que puedas explorar y analizar los datos por ti mismo.
 
 4. `Acceso rápido:`
-- Visualize ETL  [`ETL.ipynb`](./ETL.ipynb) notebook.
-- Visualize EDA  [`EDA.ipynb`](./EDA.ipynb) notebook.
-- Visualize API  [`MAIN.PY`](./main.py)
+- Visualize ETL [ETL.ipynb](./Tranformacion/ETL.ipynb) notebook.
+- Visualize ETL [EDA.ipynb](./Tranformacion/EDA.ipynb) notebook.
+- Visualize API  [`MAIN.PY`](main.py)
+- Visualize API  [`RECOMENDACION.PY`](recomendacion.py)
 
-No dudes en explorar estos recursos para obtener una visión más completa y detallada de mi proyecto de recomendación de películas. Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos [Sanchezdouglas](@Sanchezdouglas). ¡Disfruta del proyecto!
+<br/>
 
-
-
-
+No dudes en explorar estos recursos para obtener una visión más completa y detallada de mi proyecto de recomendación de películas. Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos [Douglas Sanchez](https://github.com/Sanchezdouglas) Disfruta del proyecto!
