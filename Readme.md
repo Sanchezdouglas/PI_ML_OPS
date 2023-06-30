@@ -134,7 +134,7 @@ Función de recomendación de películas: Modelo implementado para sugerir pelí
 
 Aquí encontrarás información adicional y recursos relacionados con nuestro proyecto:
 
-1. `Video explicativo:` Hemos creado un [video explicativo](link_al_video)  Te invitamos a verlo para comprender mejor cómo funciona nuestro sistema de recomendación de películas.
+1. `Video explicativo:` Hemos creado un [video explicativo](https://www.youtube.com/watch?v=C518Dld_D2U)  Te invitamos a verlo para comprender mejor cómo funciona nuestro sistema de recomendación de películas.
 
 <br/>
 <p align="center">
