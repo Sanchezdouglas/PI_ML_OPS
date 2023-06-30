@@ -6,9 +6,6 @@ from sklearn.metrics.pairwise import linear_kernel
 import pandas as pd
 from sklearn.neighbors import NearestNeighbors
 from recomendacion import movie_recomendacion
-
-
-
 from fastapi import FastAPI
 import uvicorn
 
